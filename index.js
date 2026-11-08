@@ -16,7 +16,7 @@ client.once('ready', () => {
 
 client.on('guildMemberAdd', (member) => {
     const channel = member.guild.channels.cache.get(process.env.LOG_CHANNEL_ID);
-    if (channel) channel.send(`👋 Witamy ${member.user}!`);
+    if (channel) channel.send(`👋 Witaj ${member.user}! Za chwilę admin nada Ci uprawnienia.`);
 });
 
 client.on('guildMemberRemove', (member) => {
