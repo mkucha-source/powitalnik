@@ -16,12 +16,12 @@ client.once('ready', () => {
 
 client.on('guildMemberAdd', (member) => {
     const channel = member.guild.channels.cache.get(process.env.LOG_CHANNEL_ID);
-    if (channel) channel.send(`👋 Witaj ${member.user}! Za chwilę admin nada Ci uprawnienia.`);
+    if (channel) channel.send(`🟢 Hello ${member.user}! !!!`);
 });
 
 client.on('guildMemberRemove', (member) => {
     const channel = member.guild.channels.cache.get(process.env.LOG_CHANNEL_ID);
-    if (channel) channel.send(`❌ **${member.user.tag}** opuścił serwer.`);
+    if (channel) channel.send(`❌ Farewell **${member.user.tag}** !!!`);
 });
 
 client.login(process.env.DISCORD_TOKEN);
